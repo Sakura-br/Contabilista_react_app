@@ -1,38 +1,140 @@
 .App {
-  text-align: center;
+  width: 100%;
+  height: 100vh;
+  font-size: 18px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
+  background-color: #002FD3;
+  color: #ffffff;
+  /* position: fixed; */
+  width: 100%;
+  z-index: 10; 
+  height: 100px;
+}
+
+header .logo h3 {
+  font-size: 30px;
+}
+
+nav ul li {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.2s;
+}
+nav ul li a:hover {
+  color: #afafaf;
+}
+
+.PageTop {
+  width: 100%;
+  height: 400px;
+  background-color: #DCE9F2;
+}
+
+.PageTop h1 {
+  margin: 0 auto;
+  color: #2D0F81;
+}
+
+.PageTop p {
+  color: #2D0F81;
+}
+
+.PageTop img {
+  width: auto;
+  height: 150px;
+  margin: auto 15px;
+}
+
+.CalculadorImage {
+  transform: rotate( -20deg );
+}
+
+.ShoppingCartImage {
+  transform: rotate( 20deg );
+}
+
+.PageTop {
+  display: flex;
+  justify-content: space-around;
+  padding: 100px 100px;
+}
+
+.about img {
+  width: auto;
+  height: 100px;
+}
+
+.container {
+  height: auto;
+
+}
+
+.about h3 {
+  margin: 50px 100px;
+}
+
+.about p {
+  margin: 0 100px;
+}
+
+.functions {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px auto;
+}
+
+.col-md-4 {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: inline-block;
 }
 
-.App-link {
-  color: #61dafb;
+.about button {
+  margin: 10px 100px;
+  padding: 5px 15px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  float: right;
+  background-color: #ff7efb;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.3); 
+  transition: .2s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.about button:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0);
+  background-color: #c965c5;
 }
+
+.footer {
+  width: 100%;
+  height: 100px;
+  margin: 100px 0;
+  background: linear-gradient(45deg, #193BFC 0%, #E45EE6 100%);
+}
+
+.footer p {
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  align-items: center;
+}
+
