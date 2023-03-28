@@ -1,20 +1,22 @@
 import React from 'react'
 
-const Lists = () => {
+const Lists = ({shoppingList, setShoppingList}) => {
   return (
     <div className='shoppingList'>
-        <div className='Lists'>
-            <div className='List'>
+        {shoppingList.map((shopping, index) => (
+            <div className='Lists'>
+            <div className='List' key={index}>
                 <div className='listItem'>
-                    <span>Batata</span>
+                    <span>{shopping.text}</span>
                 </div>
                 <div className='icons'>
-                    <button>
-                        <i className="fa-solid fa-trash-can"></i>
-                    </button>
+                <button>
+                    <i className="fa-solid fa-trash-can"></i>
+                </button>
                 </div>
             </div>
         </div>
+        ))}
     </div>
   )
 }

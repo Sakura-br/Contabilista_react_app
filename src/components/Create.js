@@ -10,7 +10,7 @@ const Create = () => {
     <div className='inputForm'>
       <Title />
       <InputForm shoppingList={shoppingList} setShoppingList={setShoppingList} />
-      <Lists />
+      <Lists shoppingList={shoppingList} setShoppingList={setShoppingList} />
     </div>
   )
 }

@@ -6,11 +6,17 @@ const InputForm = ({shoppingList, setShoppingList}) => {
 
   const handleSubmit = (e) => {
         e.preventDefault();
+        setShoppingList([
+            ...shoppingList,
+            {
+                text: inputText
+            }
+        ]);
+        setInputText("")
   }
 
   const handleChange = (e) => {
         setInputText(e.target.value);
-        console.log(inputText);
   }
  
   return (
@@ -19,7 +25,7 @@ const InputForm = ({shoppingList, setShoppingList}) => {
         {/* <form action='/action_page.php'> */}
             <div className='form-group'>
                 <label for='text'>Item</label>
-                <input type='text' onChange={handleChange} className='ItemForm' id='' />
+                <input type='text' onChange={handleChange} className='ItemForm' value={inputText} />
             </div>
                 <div className='form-group'>
                 <label for='text'>Grupo</label>
